@@ -686,7 +686,6 @@ public class CatalogueTest {
 		cat.addProduit("Raider", 1, 10);
 		cat.addProduit("Twix", 12.67, 1);
 		cat.addProduit("Nuts", 12.67, 1);
-		System.err.println(cat.getMontantTotalTTC());
 		assertEquals("c'est le montant total TTC qu'il faut arrondir, pas les prix TTC des différents produits",150.41,cat.getMontantTotalTTC(),0);
 	}
 	
@@ -798,7 +797,7 @@ public class CatalogueTest {
 	
 	@Test
 	public void testClear() {
-		assertEquals("liste vide",new String[0], cat.getNomProduits());
+		fail("A vous d'écrire le code de ce test");
 	}
 
 	private I_Produit createProduit(String nom, double prixHT, int quantite) {
