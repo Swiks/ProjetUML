@@ -2,7 +2,11 @@ package presentation;
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+
+import metier.Produit;
+import controle.ControllerProduit;
 
 public class FenetreSuppressionProduit extends JFrame implements ActionListener {
 
@@ -29,6 +33,7 @@ public class FenetreSuppressionProduit extends JFrame implements ActionListener 
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		ControllerProduit.supprimerProduit(this.combo.getSelectedItem());
 		this.dispose();
 	}
 

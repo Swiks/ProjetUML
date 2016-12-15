@@ -1,5 +1,7 @@
 package controle;
 
+import metier.Produit;
+
 public class ControllerProduit extends Controller{
 	public static boolean nouveauProduit(String nom, String prix,String qte){
 		double parse_prix = -1;
@@ -14,4 +16,13 @@ public class ControllerProduit extends Controller{
 			return catalogue.addProduit(nom, Double.parseDouble(prix), Integer.parseInt(qte));
 		return false;
 	}
+	
+	public static boolean supprimerProduit(Object p){
+		
+		if (p instanceof String)
+			return catalogue.removeProduit((String) p);
+		
+		return false;
+	}
+	
 }
